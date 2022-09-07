@@ -1,0 +1,136 @@
+* {
+    /* Primary */
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+
+    /* Neutral */
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    background: var(--DarkBlue);
+
+    min-height: 100vh;
+}
+
+div {
+    display: block;
+}
+
+
+/* Teksti tyyli */
+a {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+}
+
+h1 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+}
+
+p {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+}
+
+/* Container */
+.section {
+    place-content: center;
+    display: grid;
+    height: 100vh;
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-auto-rows: 200px; */
+    /* grid-template-areas:
+    ". a a ."
+    ". a a ."
+    ". a a ."; */
+}
+
+.container {
+    position: relative;
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    background: var(--DarkGrayishBlue);
+    width: 450px;
+    height: 250px;
+    padding: 30px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 97.5%;
+        height: 400px;
+    }
+    
+    .divider img {
+        width: 50%;
+    }
+}
+
+.adviceNum {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    color: var(--NeonGreen);
+    letter-spacing: 4px;
+}
+
+.advice {
+    max-height: 122.4px;
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 30px;
+    color: var(--LightCyan);
+}
+
+.divider {
+    position: absolute;
+    width: auto;
+    bottom: 50px;
+}
+
+.divider img {
+    position: absolute; 
+    width: 90%;
+}
+
+.circle {
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -32.5px;
+    position: absolute;
+    border-style: none;
+    height: 65px;
+    width: 65px;
+    background-color: var(--NeonGreen);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.circle:hover {
+    box-shadow: 0 0 25px 5px var(--NeonGreen);
+}
+
+.dice {
+    margin-top: 5px;
+    height: 25px;
+    width: 25px;
+}
+
+/* Responsiivisuus */
